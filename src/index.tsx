@@ -1,14 +1,20 @@
+/**
+ * temp dev config
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './app/App';
 
-// import { ThemeSwitcherProvider } from "react-css-theme-switcher";
+const environment = process.env.ENV_MODE;
 
-// const themes = {
-//   dark: `/css/dark.theme.css`,
-//   light: `/css/light.theme.css`,
-// };
+const themes = {
+  dark: `/css/dark.theme.css`,
+  light: `/css/light.theme.css`,
+};
+
+import { ThemeSwitcherProvider } from "react-css-theme-switcher";
 
 import './style/theme/dark.theme.less';
 
@@ -18,8 +24,12 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    {/* <ThemeSwitcherProvider themeMap={themes} defaultTheme="light"> */}
+    {environment === 'production' ?
+    <ThemeSwitcherProvider themeMap={themes} defaultTheme="light">
     <App />
-    {/* </ThemeSwitcherProvider> */}
+    </ThemeSwitcherProvider>
+    :
+    <App />
+    }
   </React.StrictMode>
 );

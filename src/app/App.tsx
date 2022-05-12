@@ -1,15 +1,35 @@
 import React from 'react';
-import { Button, DatePicker } from 'antd';
 
-const App = () => {
+import { Layout } from 'antd';
 
-    console.log(JSON.stringify(process.env.ENV_MODE));
+import HeaderOne from '../components/HeaderOne';
+import ContentOne from '../components/ContentOne';
+import SideOne from '../components/SideOne';
+import FooterOne from '../components/FooterOne';
 
-    return(
-        <>
-        <Button type="primary">HOWDY</Button>
-        <DatePicker placeholder="select date" />
-        </>
-    )
-}
+const App: React.FC = () => {
+  
+  const { Header, Footer, Sider, Content } = Layout;
+
+  return(
+      <div className="main">
+      <Layout>
+          <Header>
+            <HeaderOne />
+          </Header>
+          <Layout>
+            <Content>
+              <ContentOne />
+            </Content>
+            <Sider>
+              <SideOne />
+            </Sider>
+          </Layout>
+          <Footer>
+          <FooterOne />
+          </Footer>
+        </Layout>
+      </div>
+    );
+};
 export default App;

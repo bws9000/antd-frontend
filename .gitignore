@@ -5,4 +5,5 @@ src/style/theme
 
 notes.txt
 webpack.alternate1.conf.js
+webpack.alternative2.conf.js
 ts-alternate1.config
