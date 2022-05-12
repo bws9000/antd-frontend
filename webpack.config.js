@@ -24,11 +24,6 @@ module.exports = env => {
             { loader: 'less-loader',
               options: {
                 lessOptions: { 
-                  // modifyVars: {
-                  //   'primary-color': '#0A66C2',
-                  //   'link-color': '#0A66C2',
-                  //   'border-radius-base': '2px',
-                  // },
                   javascriptEnabled: true,
                 },
               }, 
