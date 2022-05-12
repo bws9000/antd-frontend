@@ -4,11 +4,14 @@
   "description": "kelsa-frontend",
   "main": "index.tsx",
   "scripts": {
-    "dev": "webpack-dev-server --open --mode development --hot",
-    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --hot --mode development --env mode=development",
+    "build": "webpack --mode production --env mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Burt Snyder",
+  "author": {
+    "name": "Burt Snyder",
+    "email": "snyder.burt@gmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "@types/react": "^18.0.9",
@@ -16,6 +19,7 @@
     "@types/react-router-dom": "^5.3.3",
     "antd": "^4.20.4",
     "css-loader": "^6.7.1",
+    "dotenv-webpack": "^7.1.0",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "react": "^18.1.0",

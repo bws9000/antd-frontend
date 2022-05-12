@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import App from './app/App';
+
 // import { ThemeSwitcherProvider } from "react-css-theme-switcher";
 
 // const themes = {
@@ -10,8 +12,6 @@ import ReactDOM from 'react-dom/client';
 
 import './style/theme/dark.theme.less';
 
-import { Button, DatePicker } from 'antd';
-
 const root = ReactDOM.createRoot(
   document.getElementById('app-root') as HTMLElement
 );
@@ -19,8 +19,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     {/* <ThemeSwitcherProvider themeMap={themes} defaultTheme="light"> */}
-    <Button type="primary">PRESS ME</Button>
-    <DatePicker placeholder="select date" />
+    <App />
     {/* </ThemeSwitcherProvider> */}
   </React.StrictMode>
 );
