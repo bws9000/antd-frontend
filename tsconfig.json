@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "experimentalDecorators": true,
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,
@@ -9,5 +10,8 @@
         "allowJs": true,
         "moduleResolution": "node",
         "allowSyntheticDefaultImports":true
-    }
+    },
+    "include": [
+        "typings.d.ts",
+    ]
 }

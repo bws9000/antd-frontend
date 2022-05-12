@@ -1,4 +1,8 @@
-notes.txt
 node_modules
+
+gulpfile.js
+src/style/theme
+
+notes.txt
 webpack.alternate1.conf.js
 ts-alternate1.config
