@@ -25,11 +25,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     {environment === 'production' ?
-    <ThemeSwitcherProvider themeMap={themes} defaultTheme="light">
-    <App />
-    </ThemeSwitcherProvider>
-    :
-    <App />
+      <ThemeSwitcherProvider themeMap={themes} defaultTheme="light">
+      <App />
+      </ThemeSwitcherProvider>
+      :
+      <App />
     }
   </React.StrictMode>
 );

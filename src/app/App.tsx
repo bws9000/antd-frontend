@@ -7,21 +7,30 @@ import ContentOne from '../components/ContentOne';
 import SideOne from '../components/SideOne';
 import FooterOne from '../components/FooterOne';
 
+
+const appLayoutStyle = () => {
+  return {
+    minHeight: '100vh',
+    paddingLeft: '4vw',
+    paddingRight: '4vw'
+  }
+}
+
 const App: React.FC = () => {
   
   const { Header, Footer, Sider, Content } = Layout;
 
   return(
-      <div className="main">
-      <Layout>
-          <Header>
+      <>
+        <Layout style={appLayoutStyle()}>
+          <Header style={{padding:'0'}}>
             <HeaderOne />
           </Header>
           <Layout>
             <Content>
               <ContentOne />
             </Content>
-            <Sider>
+            <Sider style={{backgroundColor:'#fff'}} >
               <SideOne />
             </Sider>
           </Layout>
@@ -29,7 +38,7 @@ const App: React.FC = () => {
           <FooterOne />
           </Footer>
         </Layout>
-      </div>
+      </>
     );
 };
 export default App;

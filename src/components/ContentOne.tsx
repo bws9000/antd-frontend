@@ -7,4 +7,4 @@ const ContentOne: FC = () => {
     );
   };
   
-  export default ContentOne;
+export default ContentOne;

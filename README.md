@@ -1,3 +1,3 @@
 # usage
-- npm run dev
-- npm run build
+- yarn run dev
+- yarn run build
