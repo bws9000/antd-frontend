@@ -1,10 +1,11 @@
 node_modules
 
 gulpfile.js
-src/style/theme/light.theme.less
+src/style/theme
 
 notes.txt
 webpack.alternate1.conf.js
 ts-alternate1.config.json
 webpack.alternative2.conf.js
 ts-alternate1.config
+assets
