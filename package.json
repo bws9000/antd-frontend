@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "kelsa-frontend",
   "main": "index.tsx",
+  "engines" : { 
+    "npm" : ">=8.0.0",
+    "node" : ">=16.0.0"
+  },
   "scripts": {
     "dev": "webpack-dev-server --hot --mode development --env mode=development",
-    "build": "webpack --mode production --env mode=production",
+    "build": "webpack --mode production --env mode=production && cp -rf public/css dist/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
