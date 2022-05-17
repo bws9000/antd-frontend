@@ -6,6 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './app/App';
+import LogRocket from 'logrocket';
 
 const environment = process.env.ENV_MODE;
 
@@ -34,3 +35,4 @@ root.render(
     }
   </React.StrictMode>
 );
+LogRocket.init('bxwv0m/antd-cixuu');
