@@ -2,6 +2,7 @@ node_modules
 
 gulpfile.js
 src/_dfx_app_assets/src/style
+src/declarations
 
 _notes
 _assets
