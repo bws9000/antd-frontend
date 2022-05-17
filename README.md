@@ -1,6 +1,7 @@
 # usage
+- make sure "USE_DFX_DEPLOY" is set to false in webpack config
 - yarn run dev
-- yarn run build
+- yarn run build-production
 
 # icp usage
 - dfx start --background

@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "webpack-dev-server --hot --mode development --env mode=development",
     "build": "webpack",
-    "build-production": "webpack --mode production --env mode=production && cp -rf public/css dist/css",
+    "build-production": "webpack --mode production --env mode=production && cp -rf src/_dfx_app_assets/assets/css dist/css && cp -rf src/_dfx_app_assets/assets/abi dist/api ",
     "prebuild": "yarn run copy:types",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-idx": "webpack serve --mode development --env development",

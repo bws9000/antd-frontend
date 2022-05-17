@@ -1,11 +1,11 @@
 node_modules
 
 gulpfile.js
-src/style/theme/dark.theme.less
-src/style/theme/light.theme.less
+src/_dfx_app_assets/src/style/theme/
 
 _notes
 _assets
+_public
 
 # dfx temporary files
 .dfx/
