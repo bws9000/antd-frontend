@@ -17,7 +17,7 @@ const themes = {
 import { ThemeSwitcherProvider } from "react-css-theme-switcher";
 
 // import './style/theme/dark.theme.less';
-import './style/theme/light.theme.less';
+// import './style/theme/light.theme.less';
 
 const root = ReactDOM.createRoot(
   document.getElementById('app-root') as HTMLElement
