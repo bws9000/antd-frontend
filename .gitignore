@@ -9,3 +9,4 @@ _assets
 
 # dfx temporary files
 .dfx/
+dist
