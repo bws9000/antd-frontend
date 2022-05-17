@@ -5,4 +5,7 @@ src/style/theme/dark.theme.less
 src/style/theme/light.theme.less
 
 _notes
-assets
+_assets
+
+# dfx temporary files
+.dfx/

@@ -1,0 +1,35 @@
+{
+    "canisters": {
+      "_dfx_app": {
+        "main": "src/_dfx_app/main.mo",
+        "type": "motoko"
+      },
+      "_dfx_app_assets": {
+        "dependencies": [
+          "_dfx_app"
+        ],
+        "frontend": {
+          "entrypoint": "src/_dfx_app_assets/src/index.html"
+        },
+        "source": [
+          "src/_dfx_app_assets/assets",
+          "dist/_dfx_app_assets/"
+        ],
+        "type": "assets"
+      }
+    },
+    "defaults": {
+      "build": {
+        "args": "",
+        "packtool": ""
+      }
+    },
+    "dfx": "0.10.0",
+    "networks": {
+      "local": {
+        "bind": "127.0.0.1:8000",
+        "type": "ephemeral"
+      }
+    },
+    "version": 1
+  }
