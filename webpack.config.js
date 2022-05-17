@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require("webpack");
 const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const USE_DFX_DEPLOY = true;
+const USE_DFX_DEPLOY = false;
 // /dfx config
 
 if(!USE_DFX_DEPLOY){
@@ -17,7 +17,7 @@ module.exports = env => {
   const envPath = path.join(__dirname, `environments`, `.env.${env.mode}`)
   
     return {
-      entry: path.join(__dirname, `src`, `index.tsx`),
+      entry: path.join(__dirname, 'src', '_dfx_app_assets', 'src', 'index.tsx'),
       devtool: 'inline-source-map',
       output: {
         path:path.resolve(__dirname, "dist"),
@@ -62,7 +62,7 @@ module.exports = env => {
       },
       plugins: [
         new HtmlWebpackPlugin({
-          template: path.join(__dirname, `public`, `index.html`),
+          template: path.join(__dirname, 'src', '_dfx_app_assets', 'src', 'index.html'),
         }),
         new Dotenv({
           path: envPath,
