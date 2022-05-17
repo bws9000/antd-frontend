@@ -3,7 +3,7 @@
 - yarn run dev
 - yarn run build-production
 
-# icp usage
+# internet computer usage
 - dfx start --background
 - dfx deploy
 - make sure "USE_DFX_DEPLOY" is set to true in webpack config

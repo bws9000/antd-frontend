@@ -1,7 +1,7 @@
 node_modules
 
 gulpfile.js
-src/_dfx_app_assets/src/style/theme/
+src/_dfx_app_assets/src/style
 
 _notes
 _assets
