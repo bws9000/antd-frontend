@@ -5,13 +5,15 @@
         "sourceMap": true,
         "noImplicitAny": true,
         "module": "es6",
-        "target": "es5",
         "jsx": "react",
         "allowJs": true,
         "moduleResolution": "node",
-        "allowSyntheticDefaultImports":true
+        "allowSyntheticDefaultImports":true,
+        "target": "es2018",
+        "lib": ["ES2018", "DOM"], 
     },
     "include": [
+        "src/**/*",
         "typings.d.ts",
     ]
 }
