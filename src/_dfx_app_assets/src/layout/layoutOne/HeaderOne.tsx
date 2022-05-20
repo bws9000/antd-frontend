@@ -18,11 +18,11 @@ const Header: FC = () => {
   const onSearch = (value: string) => console.log(value);
   
     return (
+
       <Row className="mainHeaderRow" align={'middle'} justify={'space-evenly'} wrap={false}>
         
         <Col className="columnFlex"> 
             <LinkedinOutlined className="logoIcon" />
-
         </Col>
 
         <Col className="columnOne" flex="auto">
@@ -67,6 +67,7 @@ const Header: FC = () => {
         </Col>
 
       </Row>
+      
     );
   };
   

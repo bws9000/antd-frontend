@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Layout } from 'antd';
 
+import testWeb3 from '../lib/web3';
+
 import {
   HeaderOne, 
   FooterOne, 
@@ -12,6 +14,8 @@ import {
 const App: React.FC = () => {
   
   const { Header, Footer, Sider, Content } = Layout;
+
+  console.log(testWeb3);
 
   return(
       
