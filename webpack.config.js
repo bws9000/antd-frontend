@@ -1,6 +1,7 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 // dfx config
 const webpack = require("webpack");
@@ -59,6 +60,15 @@ module.exports = env => {
       },
       resolve: {
         extensions: ['.tsx', '.ts', '.js'],
+        fallback: {
+          crypto: require.resolve("crypto-browserify"), 
+          stream: require.resolve("stream-browserify"), 
+          assert: require.resolve("assert"), 
+          http: require.resolve("stream-http"), 
+          https: require.resolve("https-browserify"), 
+          os: require.resolve("os-browserify"), 
+          url: require.resolve("url"),
+        }
       },
       plugins: [
         new HtmlWebpackPlugin({
@@ -66,7 +76,8 @@ module.exports = env => {
         }),
         new Dotenv({
           path: envPath,
-        })
+        }),
+        new NodePolyfillPlugin()
       ],
     }
 
@@ -132,6 +143,13 @@ module.exports = env => {
         events: require.resolve("events/"),
         stream: require.resolve("stream-browserify/"),
         util: require.resolve("util/"),
+        crypto: require.resolve("crypto-browserify"), 
+        stream: require.resolve("stream-browserify"), 
+        assert: require.resolve("assert"), 
+        http: require.resolve("stream-http"), 
+        https: require.resolve("https-browserify"), 
+        os: require.resolve("os-browserify"), 
+        url: require.resolve("url") 
       },
     },
     output: {
@@ -188,6 +206,7 @@ module.exports = env => {
     },
     
     plugins: [
+      new NodePolyfillPlugin(),
       new HtmlWebpackPlugin({
         template: path.join(__dirname, asset_entry),
         cache: false,
