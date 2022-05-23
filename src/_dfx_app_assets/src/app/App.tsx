@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { Layout } from 'antd';
 
-import testWeb3 from '../lib/web3';
+import Web3 from '../lib/hooks/web3';
 
 import {
   HeaderOne, 
@@ -11,11 +11,15 @@ import {
   ContentOne
 } from '../layout';
 
-const App: React.FC = () => {
+const App: FC = () => {
   
   const { Header, Footer, Sider, Content } = Layout;
 
-  console.log(testWeb3);
+  const { openWallet, account } = Web3();
+  
+  openWallet();
+
+  if(account){ console.log(account) }
 
   return(
       

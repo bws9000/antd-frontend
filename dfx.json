@@ -1,8 +1,9 @@
 {
     "canisters": {
       "_dfx_app": {
-        "main": "src/_dfx_app/main.mo",
-        "type": "motoko"
+        "candid": "src/_dfx_app/_dfx_app.did",
+        "package": "_dfx_app",
+        "type": "rust"
       },
       "_dfx_app_assets": {
         "dependencies": [

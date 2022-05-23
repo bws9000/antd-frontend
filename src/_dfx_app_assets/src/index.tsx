@@ -8,15 +8,18 @@ import ReactDOM from 'react-dom/client';
 import App from './app/App';
 import LogRocket from 'logrocket';
 
-const environment = process.env.ENV_MODE;
+
+let dark_theme = '/css/dark.theme.css';
+let light_theme = '/css/light.theme.css'
 
 const themes = {
-  dark: `/css/dark.theme.css`,
-  light: `/css/light.theme.css`,
-};
+    dark: dark_theme,
+    light: light_theme,
+  };
 
 import { ThemeSwitcherProvider } from "react-css-theme-switcher";
 
+// dev
 // import './style/theme/dark.theme.less';
 // import './style/theme/light.theme.less';
 
@@ -26,7 +29,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    {environment === 'production' ?
+    {process.env.ENV_MODE === 'production' ?
       <ThemeSwitcherProvider themeMap={themes} defaultTheme="light">
       <App />
       </ThemeSwitcherProvider>
