@@ -29,13 +29,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    {process.env.ENV_MODE === 'production' ?
       <ThemeSwitcherProvider themeMap={themes} defaultTheme="light">
       <App />
       </ThemeSwitcherProvider>
-       :
-      <App />
-    }
   </React.StrictMode>
 );
 LogRocket.init('bxwv0m/antd-cixuu');
