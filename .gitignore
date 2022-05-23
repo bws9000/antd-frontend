@@ -11,3 +11,7 @@ _public
 # dfx temporary files
 .dfx/
 dist
+
+# rust
+target
+Cargo.lock
