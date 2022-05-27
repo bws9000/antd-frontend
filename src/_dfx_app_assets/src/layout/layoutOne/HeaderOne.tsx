@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 
-import { Row, Col, Input, Space } from 'antd';
+import { Row, Col, Space } from 'antd';
+
+import { SearchComponent } from '../../components/ant';
 
 import { 
   LinkedinOutlined, 
@@ -10,12 +12,10 @@ import {
   ProfileOutlined,
   ScheduleOutlined } from '@ant-design/icons';
 
+import Web3 from '../../components/ui/Web3';
+
 
 const Header: FC = () => {
-
-  const { Search } = Input;
-
-  const onSearch = (value: string) => console.log(value);
   
     return (
 
@@ -29,7 +29,7 @@ const Header: FC = () => {
           <Row justify={'start'} wrap={false} >
             
             <Col className="columnFlex" span={8} >
-              <Search placeholder="input search text" onSearch={onSearch} style={{ width: 300 }} />
+              <SearchComponent />
             </Col>
 
             <Col span={16}>
@@ -60,6 +60,8 @@ const Header: FC = () => {
                   <span><ProfileOutlined className="navIcon"/></span> 
                   <span>Me</span>
               </Col>
+
+              <Web3 />
 
               </Space>
             </Col>
