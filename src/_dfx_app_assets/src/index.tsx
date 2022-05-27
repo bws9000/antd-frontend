@@ -21,7 +21,9 @@ import { ThemeSwitcherProvider } from "react-css-theme-switcher";
 
 // dev
 // import './style/theme/dark.theme.less';
-// import './style/theme/light.theme.less';
+import './style/theme/light.theme.less';
+
+let netlify = false;
 
 const root = ReactDOM.createRoot(
   document.getElementById('app-root') as HTMLElement
@@ -29,9 +31,13 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
+    {netlify ?
       <ThemeSwitcherProvider themeMap={themes} defaultTheme="light">
       <App />
       </ThemeSwitcherProvider>
+       :
+      <App />
+    }
   </React.StrictMode>
 );
 LogRocket.init('bxwv0m/antd-cixuu');
