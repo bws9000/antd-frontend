@@ -14,7 +14,7 @@ const Web3 = () => {
         updateFunc, 
         account } = Web3ConnectionStatus();
 
-    const handleConnectWallet = () =>{
+    const handleConnectWallet = () => {
         openWalletFunc();
     }
 
@@ -26,7 +26,7 @@ const Web3 = () => {
 
     return(
         
-        <Col onClick={()=>handleConnectWallet()} className="mainHeaderIconContainer">
+        <Col onClick={()=>handleConnectWallet()} className="mainHeaderIconContainer navPointer">
             <span><WalletOutlined className="navIcon"/></span>
             <span>Web3</span>
         </Col>

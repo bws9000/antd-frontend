@@ -23,6 +23,9 @@ module.exports = env => {
       output: {
         path:path.resolve(__dirname, "dist"),
       },
+      devServer: {
+        historyApiFallback: true
+      },
       module: {
         rules: [
           {
@@ -154,7 +157,9 @@ module.exports = env => {
       filename: "index.js",
       path: path.join(__dirname, "dist", frontendDirectory),
     },
-
+    devServer: {
+      historyApiFallback: true
+    },
     module: {
       rules: [
         {

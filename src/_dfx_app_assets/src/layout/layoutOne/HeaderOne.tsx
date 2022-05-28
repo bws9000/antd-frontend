@@ -26,6 +26,7 @@ const Header: FC = () => {
         </Col>
 
         <Col className="columnOne" flex="auto">
+          
           <Row justify={'start'} wrap={false} >
             
             <Col className="columnFlex" span={8} >

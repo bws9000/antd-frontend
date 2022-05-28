@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 const Sider: FC = () => {
 
     return (
-      <div></div>
+      <div className="sliderOne">Sider</div>
     );
   };
   
