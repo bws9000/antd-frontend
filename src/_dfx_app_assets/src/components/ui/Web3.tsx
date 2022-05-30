@@ -8,10 +8,8 @@ import Web3ConnectionStatus from '../../lib/hooks/web3';
 
 const Web3 = () => {
 
-    const { 
-        error, 
+    const {
         openWalletFunc, 
-        updateFunc, 
         account } = Web3ConnectionStatus();
 
     const handleConnectWallet = () => {
@@ -22,14 +20,23 @@ const Web3 = () => {
         if(account?.address){
             console.log(account);
         }
-    },[account])
+    },[account]);
 
-    return(
-        
-        <Col onClick={()=>handleConnectWallet()} className="mainHeaderIconContainer navPointer">
+    const walletIcon = () => {
+        return (
+            <Col onClick={()=>handleConnectWallet()} className="mainHeaderIconContainer navPointer">
             <span><WalletOutlined className="navIcon"/></span>
             <span>Web3</span>
         </Col>
+        )
+    }
+
+    return(
+        
+        <>
+        {account && walletIcon()}
+        </>
+        
 
     )
 }

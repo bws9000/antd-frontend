@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 
 import { Row, Col, Space } from 'antd';
 
-import { SearchComponent } from '../../components/ant';
+import { SearchComponent } from '../../../components/ant';
 
 import { 
   LinkedinOutlined, 
@@ -12,10 +12,10 @@ import {
   ProfileOutlined,
   ScheduleOutlined } from '@ant-design/icons';
 
-import Web3 from '../../components/ui/Web3';
+import Web3 from '../../../components/ui/Web3';
 
 
-const Header: FC = () => {
+const HeaderOne: FC = () => {
   
     return (
 
@@ -74,4 +74,4 @@ const Header: FC = () => {
     );
   };
   
-  export default Header;
+  export default HeaderOne;

@@ -37,7 +37,9 @@ const windowEthereum = () => {
 
   useEffect(() => {
     
-    updateStatus();
+    if(window.ethereum){ // temp demo check...
+
+      updateStatus();
 
     if(window.ethereum) {
       window.ethereum.on('accountsChanged', updateStatus);
@@ -47,6 +49,8 @@ const windowEthereum = () => {
       window.ethereum.removeListener('accountsChanged', updateStatus);
       window.ethereum.removeListener('chainChanged', updateStatus);
     };
+    }
+    
   }, [updateStatus]);
 
   return { 
