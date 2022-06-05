@@ -16,13 +16,23 @@ if(!USE_DFX_DEPLOY){
 module.exports = env => {
   
   console.log(JSON.stringify(env));
-  const envPath = path.join(__dirname, `environments`, `.env.${env.mode}`)
+  const envPath = path.join(__dirname, `environments`, `.env.${env.mode}`);
   
     return {
       entry: path.join(__dirname, 'src', '_dfx_app_assets', 'src', 'index.tsx'),
-      devtool: 'inline-source-map',
+      devtool: ( env.mode === 'production' ) ? false : 'inline-source-map',
       output: {
         path:path.resolve(__dirname, "dist"),
+      },
+      performance: {
+        hints: ( env.mode === 'production' ) ? false : 'error',
+        maxEntrypointSize: ( env.mode === 'production' ) ? 512000 : 90000000,
+        maxAssetSize: ( env.mode === 'production' ) ? 512000 : 90000000
+      },
+      optimization: {
+        splitChunks: {
+          chunks: 'all',
+        },
       },
       devServer: {
         historyApiFallback: true

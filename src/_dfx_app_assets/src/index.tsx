@@ -17,7 +17,6 @@ const themes = {
   };
 
 import { ThemeSwitcherProvider } from "react-css-theme-switcher";
-import LoaderComponent from '../src/components/ui/LoaderComponent';
 
 // dev
 // import './style/theme/dark.theme.less';
@@ -34,7 +33,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<LoaderComponent />}>
       {netlify ?
         <ThemeSwitcherProvider themeMap={themes} defaultTheme="dark">
         <App />
@@ -42,7 +40,6 @@ root.render(
         :
         <App />
       }
-    </Suspense>
   </React.StrictMode>
 );
 LogRocket.init('bxwv0m/antd-cixuu');
