@@ -2,7 +2,7 @@
  * temp dev config
  */
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './app/App';
@@ -17,6 +17,7 @@ const themes = {
   };
 
 import { ThemeSwitcherProvider } from "react-css-theme-switcher";
+import LoaderComponent from '../src/components/ui/LoaderComponent';
 
 // dev
 // import './style/theme/dark.theme.less';
@@ -33,13 +34,15 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    {netlify ?
-      <ThemeSwitcherProvider themeMap={themes} defaultTheme="dark">
-      <App />
-      </ThemeSwitcherProvider>
-       :
-      <App />
-    }
+    <Suspense fallback={<LoaderComponent />}>
+      {netlify ?
+        <ThemeSwitcherProvider themeMap={themes} defaultTheme="dark">
+        <App />
+        </ThemeSwitcherProvider>
+        :
+        <App />
+      }
+    </Suspense>
   </React.StrictMode>
 );
 LogRocket.init('bxwv0m/antd-cixuu');
