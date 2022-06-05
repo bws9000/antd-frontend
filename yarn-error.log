@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/burtsnyder/.nvm/versions/node/v16.15.0/bin/node /Users/burtsnyder/.yarn/bin/yarn.js add react-router-dom
+  /Users/burtsnyder/.nvm/versions/node/v16.15.0/bin/node /Users/burtsnyder/.yarn/bin/yarn.js add mini-css-extract-plugi
 
 PATH: 
-  /Users/burtsnyder/.yarn/bin:/Users/burtsnyder/.config/yarn/global/node_modules/.bin:/Users/burtsnyder/opt/anaconda3/bin:/Users/burtsnyder/.nvm/versions/node/v16.15.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/burtsnyder/Library/Android/sdk/emulator:/Users/burtsnyder/Library/Android/sdk/tools:/Users/burtsnyder/Library/Android/sdk/tools/bin:/Users/burtsnyder/Library/Android/sdk/platform-tools:/Users/burtsnyder/.local/bin:/Users/burtsnyder/Library/Python/3.9/bin:/Users/burtsnyder/.local/bin:/Users/burtsnyder/Library/Python/3.9/bin
+  /Users/burtsnyder/.yarn/bin:/Users/burtsnyder/.config/yarn/global/node_modules/.bin:/Users/burtsnyder/opt/anaconda3/bin:/Users/burtsnyder/.nvm/versions/node/v16.15.0/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/burtsnyder/.cargo/bin:/Users/burtsnyder/Library/Android/sdk/emulator:/Users/burtsnyder/Library/Android/sdk/tools:/Users/burtsnyder/Library/Android/sdk/tools/bin:/Users/burtsnyder/Library/Android/sdk/platform-tools:/Users/burtsnyder/.local/bin:/Users/burtsnyder/Library/Python/3.9/bin:/Users/burtsnyder/.local/bin:/Users/burtsnyder/Library/Python/3.9/bin
 
 Yarn version: 
   1.22.19
@@ -14,109 +14,120 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: ENOSPC: no space left on device, copyfile '/Users/burtsnyder/Library/Caches/Yarn/v6/npm-@nodelib-fs-walk-1.2.8-e95737e8bb6746ddedf69c556953494f196fe69a-integrity/node_modules/@nodelib/fs.walk/out/index.js' -> '/Users/burtsnyder/Documents/DEVPOST/Kelsa/KELSA/node_modules/@nodelib/fs.walk/out/index.js'
+  Error: https://registry.yarnpkg.com/mini-css-extract-plugi: Not found
+      at Request.params.callback [as _callback] (/Users/burtsnyder/.yarn/lib/cli.js:66145:18)
+      at Request.self.callback (/Users/burtsnyder/.yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (/Users/burtsnyder/.yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (/Users/burtsnyder/.yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
 
 npm manifest: 
   {
-      "name": "supernova-devpost-com",
-      "version": "1.0.0",
-      "description": " '' && Internet Computer.",
-      "engines": {
-        "npm": ">=8.5.5",
-        "node": ">=16.15.0"
-      },
-      "scripts": {
-        "dev": "webpack-dev-server --hot --mode development --env mode=development",
-        "build": "webpack",
-        "build-production": "webpack --mode production --env mode=production && cp -rf src/_dfx_app_assets/assets/css dist/css && cp -rf src/_dfx_app_assets/assets/abi dist/api ",
-        "prebuild": "yarn run copy:types",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start-idx": "webpack serve --mode development --env development",
-        "prestart": "yarn run copy:types",
-        "copy:types": "rsync -avr .dfx/$(echo ${DFX_NETWORK:-'**'})/canisters/** --exclude='assets/' --exclude='idl/' --exclude='*.wasm' --exclude='*.most' --delete src/declarations"
-      },
-      "author": {
-        "name": "Burt Snyder",
-        "email": "snyder.burt@gmail.com"
-      },
-      "keywords": [
-        "Ethereum",
-        "Polygon",
-        "Ant Design",
-        "Internet Computer",
-        "Rust",
-        "JavaScript",
-        "Canister"
-      ],
-      "license": "ISC",
-      "dependencies": {
-        "@ant-design/icons": "^4.7.0",
-        "@metamask/providers": "^8.1.1",
-        "@types/node": "^17.0.32",
-        "@types/react": "^18.0.9",
-        "@types/react-dom": "^18.0.3",
-        "antd": "^4.20.4",
-        "crypto": "^1.0.1",
-        "css-loader": "^6.7.1",
-        "dotenv-webpack": "^7.1.0",
-        "http": "^0.0.1-security",
-        "https": "^1.0.0",
-        "less": "^4.1.2",
-        "less-loader": "^10.2.0",
-        "logrocket": "^3.0.0",
-        "node-polyfill-webpack-plugin": "^1.1.4",
-        "react": "^18.1.0",
-        "react-css-theme-switcher": "^0.3.0",
-        "react-dom": "^18.1.0",
-        "spa-http-server": "^0.9.0",
-        "stream": "^0.0.2",
-        "style-loader": "^3.3.1",
-        "ts-loader": "^9.3.0",
-        "typescript": "^4.6.4",
-        "url": "^0.11.0",
-        "web3": "^1.7.3"
-      },
-      "devDependencies": {
-        "@babel/core": "^7.17.10",
-        "@babel/preset-env": "^7.17.10",
-        "@babel/preset-react": "^7.16.7",
-        "@dfinity/agent": "0.11.1",
-        "@dfinity/candid": "0.11.1",
-        "@dfinity/principal": "0.11.1",
-        "assert": "^2.0.0",
-        "autoprefixer": "^10.4.7",
-        "babel-loader": "^8.2.5",
-        "buffer": "^6.0.3",
-        "copy-webpack-plugin": "^9.0.1",
-        "crypto-browserify": "^3.12.0",
-        "events": "3.3.0",
-        "gulp": "^4.0.2",
-        "gulp-csso": "^4.0.1",
-        "gulp-debug": "^4.0.0",
-        "gulp-less": "^5.0.0",
-        "gulp-postcss": "^9.0.1",
-        "html-webpack-plugin": "5.5.0",
-        "https-browserify": "^1.0.0",
-        "less-plugin-npm-import": "^2.1.0",
-        "os-browserify": "^0.3.0",
-        "process": "0.11.10",
-        "stream-browserify": "^3.0.0",
-        "stream-http": "^3.2.0",
-        "terser-webpack-plugin": "5.2.5",
-        "ts-loader": "^9.3.0",
-        "typescript": "^4.6.4",
-        "util": "0.12.4",
-        "webpack": "5.72.0",
-        "webpack-cli": "4.9.2",
-        "webpack-dev-server": "^4.8.1"
-      },
-      "browserslist": [
-        "last 2 chrome version",
-        "last 2 firefox version",
-        "last 2 safari version",
-        "last 2 edge version"
-      ]
-    }
+    "name": "supernova-devpost-com",
+    "version": "1.0.0",
+    "description": " '' && Internet Computer.",
+    "engines": {
+      "npm": ">=8.5.5",
+      "node": ">=16.15.0"
+    },
+    "scripts": {
+      "dev": "webpack-dev-server --hot --mode development --env mode=development",
+      "build": "webpack",
+      "build-production": "webpack --mode production --env mode=production && cp -rf src/_dfx_app_assets/assets/css dist/css && cp -rf src/_dfx_app_assets/assets/abi dist/api ",
+      "prebuild": "yarn run copy:types",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start-idx": "webpack serve --mode development --env development",
+      "prestart": "yarn run copy:types",
+      "copy:types": "rsync -avr .dfx/$(echo ${DFX_NETWORK:-'**'})/canisters/** --exclude='assets/' --exclude='idl/' --exclude='*.wasm' --exclude='*.most' --delete src/declarations"
+    },
+    "author": {
+      "name": "Burt Snyder",
+      "email": "snyder.burt@gmail.com"
+    },
+    "keywords": [
+      "Ethereum",
+      "Polygon",
+      "Ant Design",
+      "Internet Computer",
+      "Rust",
+      "JavaScript",
+      "Canister"
+    ],
+    "license": "ISC",
+    "dependencies": {
+      "@ant-design/icons": "^4.7.0",
+      "@metamask/providers": "^8.1.1",
+      "@types/node": "^17.0.32",
+      "@types/react": "^18.0.9",
+      "@types/react-dom": "^18.0.3",
+      "antd": "^4.20.4",
+      "crypto": "^1.0.1",
+      "css-loader": "^6.7.1",
+      "dotenv-webpack": "^7.1.0",
+      "http": "^0.0.1-security",
+      "https": "^1.0.0",
+      "less": "^4.1.2",
+      "less-loader": "^10.2.0",
+      "logrocket": "^3.0.0",
+      "node-polyfill-webpack-plugin": "^1.1.4",
+      "react": "^18.1.0",
+      "react-css-theme-switcher": "^0.3.0",
+      "react-dom": "^18.1.0",
+      "react-router-dom": "6",
+      "spa-http-server": "^0.9.0",
+      "stream": "^0.0.2",
+      "style-loader": "^3.3.1",
+      "ts-loader": "^9.3.0",
+      "typescript": "^4.6.4",
+      "url": "^0.11.0",
+      "web3": "^1.7.3"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.17.10",
+      "@babel/preset-env": "^7.17.10",
+      "@babel/preset-react": "^7.16.7",
+      "@dfinity/agent": "0.11.1",
+      "@dfinity/candid": "0.11.1",
+      "@dfinity/principal": "0.11.1",
+      "assert": "^2.0.0",
+      "autoprefixer": "^10.4.7",
+      "babel-loader": "^8.2.5",
+      "buffer": "^6.0.3",
+      "copy-webpack-plugin": "^9.0.1",
+      "crypto-browserify": "^3.12.0",
+      "events": "3.3.0",
+      "gulp": "^4.0.2",
+      "gulp-csso": "^4.0.1",
+      "gulp-debug": "^4.0.0",
+      "gulp-less": "^5.0.0",
+      "gulp-postcss": "^9.0.1",
+      "html-webpack-plugin": "5.5.0",
+      "https-browserify": "^1.0.0",
+      "less-plugin-npm-import": "^2.1.0",
+      "os-browserify": "^0.3.0",
+      "process": "0.11.10",
+      "stream-browserify": "^3.0.0",
+      "stream-http": "^3.2.0",
+      "terser-webpack-plugin": "5.2.5",
+      "ts-loader": "^9.3.0",
+      "typescript": "^4.6.4",
+      "util": "0.12.4",
+      "webpack": "5.72.0",
+      "webpack-cli": "4.9.2",
+      "webpack-dev-server": "^4.8.1"
+    },
+    "browserslist": [
+      "last 2 chrome version",
+      "last 2 firefox version",
+      "last 2 safari version",
+      "last 2 edge version"
+    ]
+  }
 
 yarn manifest: 
   No manifest
@@ -1066,7 +1077,7 @@ Lockfile:
       "@babel/plugin-transform-react-jsx-development" "^7.16.7"
       "@babel/plugin-transform-react-pure-annotations" "^7.16.7"
   
-  "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.8.4":
+  "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
     version "7.18.3"
     resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.3.tgz#c7b654b57f6f63cf7f8b418ac9ca04408c4579f4"
     integrity sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==
@@ -1548,11 +1559,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@types/har-format/-/har-format-1.2.8.tgz#e6908b76d4c88be3db642846bb8b455f0bfb1c4e"
     integrity sha512-OP6L9VuZNdskgNN3zFQQ54ceYD8OLq5IbqO4VK91ORLfOm7WdT/CiT/pHEBSQEqCInJ2y3O6iCm/zGtPElpgJQ==
   
-  "@types/history@^4.7.11":
-    version "4.7.11"
-    resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.11.tgz#56588b17ae8f50c53983a524fc3cc47437969d64"
-    integrity sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==
-  
   "@types/html-minifier-terser@^6.0.0":
     version "6.1.0"
     resolved "https://registry.yarnpkg.com/@types/html-minifier-terser/-/html-minifier-terser-6.1.0.tgz#4fc33a00c1d0c16987b1a20cf92d20614c55ac35"
@@ -1612,23 +1618,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.5.tgz#330b2d472c22f796e5531446939eacef8378444a"
     integrity sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==
     dependencies:
-      "@types/react" "*"
-  
-  "@types/react-router-dom@^5.3.3":
-    version "5.3.3"
-    resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-5.3.3.tgz#e9d6b4a66fcdbd651a5f106c2656a30088cc1e83"
-    integrity sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==
-    dependencies:
-      "@types/history" "^4.7.11"
-      "@types/react" "*"
-      "@types/react-router" "*"
-  
-  "@types/react-router@*":
-    version "5.1.18"
-    resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-5.1.18.tgz#c8851884b60bc23733500d86c1266e1cfbbd9ef3"
-    integrity sha512-YYknwy0D0iOwKQgz9v8nOzt2J6l4gouBmDnWqUUznltOTaon+r8US8ky8HvN0tXvc38U9m6z/t2RsVsnd1zM0g==
-    dependencies:
-      "@types/history" "^4.7.11"
       "@types/react" "*"
   
   "@types/react@*", "@types/react@^18.0.9":
@@ -4712,6 +4701,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
     integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
   
+  history@^5.2.0:
+    version "5.3.0"
+    resolved "https://registry.yarnpkg.com/history/-/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
+    integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==
+    dependencies:
+      "@babel/runtime" "^7.7.6"
+  
   hmac-drbg@^1.0.1:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -7287,6 +7283,21 @@ Lockfile:
     version "16.13.1"
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
     integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+  
+  react-router-dom@6:
+    version "6.3.0"
+    resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.3.0.tgz#a0216da813454e521905b5fa55e0e5176123f43d"
+    integrity sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==
+    dependencies:
+      history "^5.2.0"
+      react-router "6.3.0"
+  
+  react-router@6.3.0:
+    version "6.3.0"
+    resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.3.0.tgz#3970cc64b4cb4eae0c1ea5203a80334fdd175557"
+    integrity sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==
+    dependencies:
+      history "^5.2.0"
   
   react@^18.1.0:
     version "18.1.0"

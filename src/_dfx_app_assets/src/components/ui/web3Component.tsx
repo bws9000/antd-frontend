@@ -6,7 +6,7 @@ import { Col } from 'antd';
 
 import Web3ConnectionStatus from '../../lib/hooks/web3';
 
-const Web3 = () => {
+const web3Component = () => {
 
     const {
         openWalletFunc, 
@@ -40,4 +40,4 @@ const Web3 = () => {
 
     )
 }
-export default Web3;
+export default web3Component;

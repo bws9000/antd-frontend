@@ -21,12 +21,11 @@ import { ThemeSwitcherProvider } from "react-css-theme-switcher";
 // dev
 // import './style/theme/dark.theme.less';
 // import './style/theme/light.theme.less';
+let netlify = true;
 
 import { 
   BrowserRouter, 
   Routes, Route, Link } from 'react-router-dom';
-
-let netlify = true;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

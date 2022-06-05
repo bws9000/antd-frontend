@@ -6,11 +6,10 @@ import {
 
 import HomeLayout from '../layout/homeLayout';
 
-
 const App: FC = () => {
 
   return(
-
+    
       <Router>
         <Routes>
           <Route path='/' element={<HomeLayout />}/>

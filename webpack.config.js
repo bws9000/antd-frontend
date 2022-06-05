@@ -1,7 +1,8 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // dfx config
 const webpack = require("webpack");
@@ -28,6 +29,10 @@ module.exports = env => {
       },
       module: {
         rules: [
+          {
+            test: /\.css$/i,
+            use: [MiniCssExtractPlugin.loader, "css-loader"],
+          },
           {
             test: /\.less$/,
             use: [
@@ -162,6 +167,10 @@ module.exports = env => {
     },
     module: {
       rules: [
+        {
+          test: /\.css$/i,
+          use: [MiniCssExtractPlugin.loader, "css-loader"],
+        },
         {
           test: /\.less$/,
           use: [

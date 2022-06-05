@@ -12,7 +12,7 @@ import {
   ProfileOutlined,
   ScheduleOutlined } from '@ant-design/icons';
 
-import Web3 from '../../../components/ui/Web3';
+import Web3 from '../../../components/ui/web3Component';
 
 
 const HeaderOne: FC = () => {
